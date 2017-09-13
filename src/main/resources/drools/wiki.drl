@@ -1,0 +1,10 @@
+package drools
+
+import ro.neghina.sparkapp.entities.LangRating
+
+rule "Lang good Score"
+    when
+        l : LangRating(score > 500)
+    then
+        l.setApproved(true);
+    end
