@@ -2,9 +2,11 @@ package drools
 
 import ro.neghina.sparkapp.entities.LangRating
 
+expander wiki.dsl
+
 rule "Lang good Score"
     when
-        l : LangRating(score > 500)
+        If there is a Language with score greater than 500
     then
-        l.setApproved(true);
+        Say "Language approved"
     end
